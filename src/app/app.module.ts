@@ -1,6 +1,12 @@
 import { ClienteModule } from './cliente/cliente.module';
+import { ToastModule } from 'primeng/toast';
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
+import { ConfirmationService } from 'primeng/api';
+import { MessageService } from 'primeng/api';
+
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,10 +18,18 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ClienteModule
+    HttpClientModule,
+    ToastModule,
+    ConfirmDialogModule,
+    ClienteModule   
   ],
-  providers: [],
+  providers: [
+    MessageService,
+    Title,
+    ConfirmationService  
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
 

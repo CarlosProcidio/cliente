@@ -1,7 +1,18 @@
+import { TabelaComponent } from './tabela/tabela.component';
+import { FormularioComponent } from './formulario/formulario.component';
+
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+
+// http://localhot:/4200/
+// { path: '????' , component: ?????? }
+// { path: 'cliente/:codigo' , component: FormularioComponent } identifica um id no formulario de cliente
+const routes: Routes = [
+  { path: 'cliente', component: FormularioComponent },
+  { path: 'cliente/:codigo', component: FormularioComponent },
+  { path: 'listar/cliente', component: TabelaComponent }
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

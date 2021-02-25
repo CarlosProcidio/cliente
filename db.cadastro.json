@@ -2,214 +2,71 @@
   "cliente": [
     {
       "id": 1,
-      "nome": "Rafael",
-      "sobrenome": "Lopes",
-      "email": "galotinhodelta@gmail.com",
-      "telefone": "(77) 77777-7777",
-      "cpf": "777777777777",
-      "rg": "777777",
-      "endereco": {
-        "cep": "45651680",
-        "logradouro": "777777",
-        "complemento": "77777777",
-        "numero": "77777777",
-        "bairro": "777777777",
-        "estado": {
-          "id": "",
-          "nome": "",
-          "cidade": {
-            "id": "",
-            "nome": ""
-          }
-        }
-      },
-      "dataNasc": "2021-02-23"
-    },
-    {
-      "id": 2,
-      "nome": "Rafael",
-      "sobrenome": "Lopes",
-      "email": "galotinhodelta@gmail.com",
-      "telefone": "(88) 88888-8888",
-      "cpf": "8888888",
-      "rg": "88888888",
-      "endereco": {
-        "cep": "45651680",
-        "logradouro": "888888",
-        "complemento": "8888888",
-        "numero": "8888888",
-        "bairro": "88888888",
-        "estado": {
-          "id": 1,
-          "nome": "Bahia",
-          "cidade": {
-            "id": 2,
-            "nome": "Ilhéus"
-          }
-        }
-      },
-      "dataNasc": "2021-02-24"
-    },
-    {
-      "id": 3,
-      "nome": "Rafael",
-      "sobrenome": "Lopes",
-      "email": "galotinhodelta@gmail.com",
-      "telefone": "(99) 99999-9999",
-      "cpf": "9999999999876",
-      "rg": "99999999",
-      "endereco": {
-        "cep": "45651680",
-        "logradouro": "99999999998",
-        "complemento": "9998",
-        "numero": "999998",
-        "bairro": "9999999998",
-        "estado": {
-          "id": 1,
-          "nome": "Bahia",
-          "cidade": {
-            "id": 2,
-            "nome": "Ilhéus"
-          }
-        }
-      },
-      "dataNasc": "2021-03-13"
-    },
-    {
-      "id": 4,
-      "nome": "Rafael",
-      "sobrenome": "Lopes",
-      "email": "galotinhodelta@gmail.com",
-      "telefone": "(22) 22222-2222",
-      "cpf": "222222",
-      "rg": "22222",
-      "endereco": {
-        "cep": "45651680",
-        "logradouro": "2222",
-        "complemento": "222222",
-        "numero": "2222",
-        "bairro": "222298",
-        "estado": {
-          "id": 1,
-          "nome": "Bahia",
-          "cidade": {
-            "id": 2,
-            "nome": "Ilhéus"
-          }
-        }
-      },
-      "dataNasc": "2021-02-21"
-    },
-    {
-      "id": 5,
-      "nome": "Rafael",
-      "sobrenome": "Lopes",
-      "email": "galotinhodelta@gmail.com",
-      "telefone": "(33) 33333-3333",
-      "cpf": "33333",
-      "rg": "3333",
-      "endereco": {
-        "cep": "45651680",
-        "logradouro": "333333",
-        "complemento": "33",
-        "numero": "333333333",
-        "bairro": "333333333334",
-        "estado": {
-          "id": 1,
-          "nome": "Bahia",
-          "cidade": {
-            "id": 2,
-            "nome": "Ilhéus"
-          }
-        }
-      },
-      "dataNasc": "2021-02-06"
-    },
-    {
-      "id": 6,
-      "nome": "Rafael",
-      "sobrenome": "Lopes",
-      "email": "galotinhodelta@gmail.com",
-      "telefone": "(77) 77777-7777",
-      "cpf": "777777777",
-      "rg": "77777777",
-      "endereco": {
-        "cep": "45651680",
-        "logradouro": "777",
-        "complemento": "77",
-        "numero": "77",
-        "bairro": "77777",
-        "estado": {
-          "id": 1,
-          "nome": "Bahia",
-          "cidade": {
-            "id": 2,
-            "nome": "Ilhéus"
-          }
-        }
-      },
-      "dataNasc": "2021-03-02"
-    },
-    {
-      "id": 7,
-      "nome": "CARLOS",
-      "sobrenome": "PROCIDIO",
+      "nome": "Carlos",
+      "sobrenome": "Procidio",
+      "dataNasc": "2021-02-23",
       "email": "carlosprocidio@gmail.com",
-      "telefone": "(11) 98765-4321",
-      "cpf": "04491817820'",
-      "rg": "143626644",
-      "endereco": {
-        "cep": "03166-001",
-        "logradouro": "R. Taquari",
-        "complemento": "Apto 101",
-        "numero": "894",
-        "bairro": "Mooca",
-        "estado": {
-          "id": 2,
-          "nome": "São Paulo",
-          "cidade": {
-            "id": 4,
-            "nome": "São Paulo"
-          }
-        }
-      },
-      "dataNasc": "1962-04-24"
-    }
-  ],
-  "estado": [
-    {
-      "id": 1,
-      "nome": "Bahia"
+      "telefone": "(__) _____-____",
+      "cpf": "034.222.333-20",
+      "rg": "15.664.132-4",
+      "cep": "69900.600",
+      "logradouro": "Rua Taquari",
+      "numero": "Apto. 100",
+      "complemento": "777",
+      "bairro": "Mooca",
+      "cidade": "São Paulo",
+      "estado": "SP"
     },
     {
       "id": 2,
-      "nome": "São Paulo"
+      "nome": "João",
+      "sobrenome": "Sabino",
+      "dataNasc": "1990-10-10",
+      "email": "jsabino@mail.com",
+      "telefone": "(11) 98898-5566",
+      "cpf": "022.333.444-20",
+      "rg": "023.456.789-0",
+      "cep": "69900.100",
+      "logradouro": "Rua Floriano Peixoto",
+      "complemento": "",
+      "numero": "56",
+      "bairro": "Papouco",
+      "cidade": "Rio Branco",
+      "estado": "AC"
     },
     {
       "id": 3,
-      "nome": "Minas Gerais"
-    }
-  ],
-  "cidade": [
-    {
-      "id": 1,
-      "nome": "Salvador",
-      "estado": 1
-    },
-    {
-      "id": 2,
-      "nome": "Ilhéus",
-      "estado": 1
-    },
-    {
-      "id": 3,
-      "nome": "Belo Horizonte",
-      "estado": 3
+      "nome": "Maria",
+      "sobrenome": "Carolina",
+      "dataNasc": "1991-11-11",
+      "email": "mcarolina@wmail.com",
+      "telefone": "(11) 22222-3333",
+      "cpf": "111.222.333-44",
+      "rg": "111.222.333-4",
+      "cep": "03166.001",
+      "logradouro": "Rua Taquari",
+      "complemento": "",
+      "numero": "89",
+      "bairro": "Mooca",
+      "cidade": "São Paulo",
+      "estado": "SP"
     },
     {
       "id": 4,
-      "nome": "São Paulo",
-      "estado": 2
+      "nome": "Clarice",
+      "sobrenome": "Santos",
+      "dataNasc": "1980-12-21",
+      "email": "clispe@mail.com",
+      "telefone": "(11) 22222-3333",
+      "cpf": "111.222.333-44",
+      "rg": "111.222.333-4",
+      "cep": "69900.100",
+      "logradouro": "Rua Floriano Peixoto",
+      "complemento": "apto. 100",
+      "numero": "90",
+      "bairro": "Papouco",
+      "cidade": "Rio Branco",
+      "estado": "AC"
     }
   ]
 }

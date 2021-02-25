@@ -1,15 +1,18 @@
 <div class="container mt-5 mb-5 pt-5" style="position: relative;">
-    <form (ngSubmit)="cadastrarOuAtualizar()">
+
+       <form (ngSubmit)="cadastrarOuAtualizar()">
+        <!-- <form (ngSubmit)="submit()" [formGroup]="form"> -->
         <div class="form-row">
             <input type="hidden"
                 name="id" 
                 [(ngModel)]="cliente.id">
 
+                <!-- formControlName="nome"  -->
             <div class="form-group col-md-6">
                 <label for="nome">Nome</label>
                 <input 
                     name="nome" 
-                    type="text" 
+                    type="text"
                     class="form-control" 
                     [(ngModel)]="cliente.nome">
             </div>
@@ -59,20 +62,24 @@
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="cpf">CPF</label>
-                <input 
-                    type="text" 
-                    class="form-control" 
+                <p-inputMask 
+                    styleClass="form-control" 
                     name="cpf" 
-                    [(ngModel)]="cliente.cpf">
+                    placeholder="999.999.999-99"
+                    [(ngModel)]="cliente.cpf" 
+                    mask="999.999.999-99">
+                </p-inputMask>
             </div>
             <div class="form-group col-md-4">
                 <label for="rg">RG</label>
-                <input 
-                    type="text" 
-                    class="form-control" 
+                <p-inputMask 
+                    styleClass="form-control" 
                     name="rg" 
-                    [(ngModel)]="cliente.rg">
-            </div>
+                    placeholder="999.999.999-9"
+                    [(ngModel)]="cliente.rg" 
+                    mask="999.999.999-9">
+                </p-inputMask>
+            </div>    
             <div class="form-group col-md-2">
                 <label for="data_nasc">Data de Nascimento</label>
                 <input 
@@ -86,11 +93,14 @@
         <div class="form-row">
             <div class="form-group col-md-2">
                 <label for="cep">CEP</label>
-                <input 
-                    type="text" 
-                    class="form-control" 
+                <p-inputMask 
+                    styleClass="form-control" 
                     name="cep" 
-                    [(ngModel)]="cliente.endereco.cep">
+                    placeholder="99999.999"
+                    [(ngModel)]="cliente.cep" 
+                    mask="99999.999"
+                    (keydown) = "buscarCep(cliente.cep)">
+                </p-inputMask>
             </div>
             <div class="form-group col-md-8">
                 <label for="logradouro">Logradouro</label>
@@ -98,7 +108,7 @@
                     type="text"
                     class="form-control"
                     name="logradouro"
-                    [(ngModel)]="cliente.endereco.logradouro">
+                    [(ngModel)]="cliente.logradouro">
             </div>
             <div class="form-group col-md-2">
                 <label for="numero">Número</label>
@@ -111,7 +121,7 @@
         </div>
 
         <div class="form-row">
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-3">
                 <label for="complemento">Complemento</label>
                 <input 
                     name="complemento" 
@@ -119,7 +129,7 @@
                     class="form-control"
                     [(ngModel)]="cliente.complemento">
             </div>
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-4">
                 <label for="bairro">Bairro</label>
                 <input 
                     name="bairro" 
@@ -127,53 +137,29 @@
                     class="form-control"
                     [(ngModel)]="cliente.bairro">
             </div>
-        </div>
-            
-        <div class="form-row">
-            <div class="form-group col-md-6">
-                <label for="">Estado</label>
-                <p-dropdown 
-                    [options]="estados"
-                    [(ngModel)]="estado"
-                    name="estado"  
-                    optionLabel="nome"                                      
-                    [filter]="true" 
-                    [style]="{'width':'100%'}"
-                    placeholder="Selecione um Estado" 
-                    [showClear]="true"
-                    (onChange)="listarCidades()">
-                    <ng-template pTemplate="selectedItem">
-                        <div *ngIf="estado">
-                            <div>{{estado.nome}}</div>
-                        </div>
-                    </ng-template>
-                </p-dropdown>
-            </div>
-            <div class="form-group col-md-6">
+             <div class="form-group col-md-4">
                 <label for="">Cidade</label>
-                <p-dropdown 
-                    [options]="cidades" 
-                    [disabled]="!estado"                    
-                    [(ngModel)]="cidade" 
-                    emptyFilterMessage="Nenhuma cidade cadastrada"
-                    name="cidade"
-                    optionLabel="nome"                     
-                    [filter]="true" 
-                    [style]="{'width':'100%'}">
-                    <ng-template pTemplate="selectedItem">
-                        <div *ngIf="cidade">
-                            <div>{{cidade.nome}}</div>
-                        </div>
-                    </ng-template>                                      
-                </p-dropdown>
+                <input 
+                name="cidade" 
+                type="text" 
+                class="form-control"
+                [(ngModel)]="cliente.cidade">
+            </div>
+                       <div class="form-group col-md-1">
+                <label for="">Estado</label>
+                <input 
+                name="estado" 
+                type="text" 
+                class="form-control"
+                [(ngModel)]="cliente.estado">
             </div>
         </div>       
         <button 
             type="submit" 
             class="btn"
-            [class]="operacao ? 'btn-primary' : 'btn-success'">{{ operacao ? "Cadastrar" : "Atualizar" }}>
+            [class]="operacao ? 'btn-primary' : 'btn-success'">{{ operacao ? "Cadastrar" : "Atualizar" }}
         </button>
         <br><br>
-        <!-- <a routerLink="/listar/cliente">Voltar para a pesquisa</a> -->
+        <a routerLink="/listar/cliente">Voltar para a pesquisa</a>
     </form>
 </div>

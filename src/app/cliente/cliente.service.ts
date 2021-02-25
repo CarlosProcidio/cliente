@@ -30,6 +30,7 @@ export class ClienteService {
     return this.http.delete(`${environment.url}`+'/cliente/'+id);
   }
 
+  /*
   listarEstados(){
     return this.http.get(`${environment.url}`+'/estado');
   }
@@ -37,4 +38,5 @@ export class ClienteService {
   listarCidades(id: number) {
     return this.http.get(`${environment.url}`+'/cidade'+'?estado='+id);
   }
+  */
 }
